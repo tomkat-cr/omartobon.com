@@ -1,0 +1,408 @@
+
+[
+    {
+      "id": 1,
+      "name": "MedOffLine",
+      "description": "Asistente de AI enfocado a ofrecer orientación de primeros auxilios básicos en comunidades con acceso limitado o sin acceso a Internet",
+      "category": "Android App",
+      "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/MedOffLine.circled.logo.500.png?raw=true",
+      "urls": [
+          {
+              "name": "Articulo de LinkedIn sobre MedOffLine",
+              "url": "https://www.linkedin.com/pulse/medoffline-empoderando-comunidades-con-orientaci%25C3%25B3n-m%25C3%25A9dica-ramirez-spd4e/?trackingId=rha2U%2FUwT8%2BxSE2xsUQOyQ%3D%3D"
+          },
+          {
+              "name": "Sitio Web del Proyecto",
+              "url": "https://medoffline.streamlit.app/"
+          },
+          {
+              "name": "Repositorio del Proyecto",
+              "url": "https://github.com/tomkat-cr/medoffline"
+          },
+          {
+              "name": "Pagina de Entrega del Proyecto para el Hackathon",
+              "url": "https://lablab.ai/event/hackathon-llama-impact-pan-latam-es/the-fynbots/medoffline"
+          }
+      ],
+      "resources_type": "image",
+      "resources": [
+          {
+              "id": 1,
+              "name": "MedOffLine - Portada # 1",
+              "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/MedOffLine-cover-image-final-esp.png?raw=true"
+          },
+          {
+              "id": 2,
+              "name": "MedOffLine - Portada # 2",
+              "image": "https://raw.githubusercontent.com/tomkat-cr/medoffline/refs/heads/main/assets/MedOffLine-cover-image-1.webp"
+          },
+          {
+              "id": 3,
+              "name": "MedOffLine - Portada # 3",
+              "image": "https://raw.githubusercontent.com/tomkat-cr/medoffline/refs/heads/main/assets/MedOffLine-cover-image-2.webp"
+          },
+          {
+              "id": 4,
+              "name": "Ilustracion de Medicos en Accion # 1",
+              "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/1eb5de0b-c739-4547-920f-14d35f875db0.jpeg?raw=true"
+          },
+          {
+              "id": 5,
+              "name": "Ilustracion de Medicos en Accion # 2",
+              "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/27b75e51-d0de-4690-aba2-cc6db95aa938.jpeg?raw=true"
+          },
+          {
+              "id": 6,
+              "name": "Ilustracion de Medicos en Accion # 3",
+              "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/4d7f3d04-622f-4f0b-bee2-ab0749ab551c.jpeg?raw=true"
+          },
+          {
+              "id": 7,
+              "name": "Ilustracion de Medicos en Accion # 4",
+              "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/67481623-2eba-4512-b106-4d25ddc30a75.jpeg?raw=true"
+          },
+          {
+              "id": 8,
+              "name": "Ilustracion de Medicos en Accion # 5",
+              "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/8bdffc8e-b8f0-4f9a-a883-dd7bcb70b3a6.jpeg?raw=true"
+          },
+          {
+              "id": 9,
+              "name": "Ilustracion de Medicos en Accion # 6",
+              "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/b9154955-edc2-4b3c-9124-d3c983b76d2c.jpeg?raw=true"
+          },
+          {
+              "id": 10,
+              "name": "Ilustracion de Medicos en Accion # 7",
+              "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/f8938201-f228-4a65-82da-d5bfd52b5b6d.jpeg?raw=true"
+          },
+          {
+            "id": 11,
+            "name": "Medoffline A",
+            "image": "./gallery/ai_image_generation/Medoffline_13f37628-ccd0-48d7-949e-a0ff7fe705d2.webp"
+          },
+          {
+            "id": 12,
+            "name": "Medoffline B",
+            "image": "./gallery/ai_image_generation/Medoffline_1a8d29e4-1c5c-4a6e-bca7-7cf6c9d9a07c.webp"
+          },
+          {
+            "id": 13,
+            "name": "Medoffline C",
+            "image": "./gallery/ai_image_generation/Medoffline_2831b203-d3f1-453d-916b-a1a0ffbc297b.webp"
+          },
+          {
+            "id": 14,
+            "name": "Medoffline D",
+            "image": "./gallery/ai_image_generation/Medoffline_36e12050-1d74-42a5-bcc1-196dd8a48fdb.webp"
+          },
+          {
+            "id": 15,
+            "name": "Medoffline E",
+            "image": "./gallery/ai_image_generation/Medoffline_4cc0a5f1-4c14-4a9c-8fce-d0b6ee912adb.webp"
+          },
+          {
+            "id": 16,
+            "name": "Medoffline F",
+            "image": "./gallery/ai_image_generation/Medoffline_4df2bb2a-60e9-494c-b2c7-8775ca5f01a9.jpg"
+          },
+          {
+            "id": 17,
+            "name": "Medoffline G",
+            "image": "./gallery/ai_image_generation/Medoffline_4f125f1e-3cc3-4a06-bc55-1f4118d780d3.webp"
+          },
+          {
+            "id": 18,
+            "name": "Medoffline H",
+            "image": "./gallery/ai_image_generation/Medoffline_51084124-3784-41dc-9dc6-a0497427a950.jpg"
+          },
+          {
+            "id": 19,
+            "name": "Medoffline I",
+            "image": "./gallery/ai_image_generation/Medoffline_7c2fd859-00b3-4d9c-bfaa-9269af0e3692.jpg"
+          },
+          {
+            "id": 20,
+            "name": "Medoffline J",
+            "image": "./gallery/ai_image_generation/Medoffline_95d71600-65a2-4b31-a043-182cef378f82.webp"
+          },
+          {
+            "id": 21,
+            "name": "Enhanced Colorful Image",
+            "image": "./gallery/ai_image_generation/Medoffline_Enhanced-Colorful-Image.png"
+          },
+          {
+            "id": 22,
+            "name": "Llama y Salto Angel",
+            "image": "./gallery/ai_image_generation/Medoffline_Llama-y-Salto-Angel.webp"
+          }
+     
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Esmioptica",
+      "category": "Publicidad y Marketing",
+      "image": "./gallery/ai_image_generation/Esmioptica_Boton.jpg",
+      "resources_type": "image",
+      "resources": [
+        {
+          "id": 2,
+          "name": "Dados A",
+          "image": "./gallery/ai_image_generation/Esmioptica_Dados-2025-05-21_A.png"
+        },
+        {
+          "id": 3,
+          "name": "Dados B",
+          "image": "./gallery/ai_image_generation/Esmioptica_Dados-2025-06-08_A.png"
+        },
+        {
+          "id": 4,
+          "name": "Dados C",
+          "image": "./gallery/ai_image_generation/Esmioptica_Dados-2025-06-08_B.png"
+        },
+        {
+          "id": 5,
+          "name": "Dados D",
+          "image": "./gallery/ai_image_generation/Esmioptica_Dados-2025-06-10_A.png"
+        },
+        {
+          "id": 6,
+          "name": "Flyer A",
+          "image": "./gallery/ai_image_generation/Esmioptica_Flyer-2025-05-14_A.png"
+        },
+        {
+          "id": 7,
+          "name": "Flyer B",
+          "image": "./gallery/ai_image_generation/Esmioptica_Flyer-2025-05-14_B.png"
+        },
+        {
+          "id": 8,
+          "name": "Flyer C",
+          "image": "./gallery/ai_image_generation/Esmioptica_Flyer-2025-05-14_C.png"
+        },
+        {
+          "id": 9,
+          "name": "Flyer D",
+          "image": "./gallery/ai_image_generation/Esmioptica_Flyer-2025-05-19_A.png"
+        },
+        {
+          "id": 10,
+          "name": "Flyer E",
+          "image": "./gallery/ai_image_generation/Esmioptica_Flyer-2025-05-22_A.png"
+        },
+        {
+          "id": 11,
+          "name": "Flyer F",
+          "image": "./gallery/ai_image_generation/Esmioptica_Flyer-2025-05-22_B.png"
+        },
+        {
+          "id": 12,
+          "name": "Flyer Dados A",
+          "image": "./gallery/ai_image_generation/Esmioptica_Flyer-Dados-2025-03-11_A.png"
+        },
+        {
+          "id": 13,
+          "name": "Flyer Quienes Somos 1",
+          "image": "./gallery/ai_image_generation/Esmioptica_Flyer-Quienes-Somos-1.png"
+        },
+        {
+          "id": 14,
+          "name": "Flyer Quienes Somos 2",
+          "image": "./gallery/ai_image_generation/Esmioptica_Flyer-Quienes-Somos-2.png"
+        },
+        {
+          "id": 15,
+          "name": "Flyer Tu Vision",
+          "image": "./gallery/ai_image_generation/Esmioptica_Flyer-Tu-Vision.png"
+        },
+        {
+          "id": 16,
+          "name": "Post Instagram Oferta 2x1",
+          "image": "./gallery/ai_image_generation/Esmioptica_Post-Instagram-Oferta-2x1.png"
+        },
+        {
+          "id": 17,
+          "name": "Promo A",
+          "image": "./gallery/ai_image_generation/Esmioptica_Promo-2025-05-21_A.png"
+        },
+        {
+          "id": 18,
+          "name": "Promo B",
+          "image": "./gallery/ai_image_generation/Esmioptica_Promo-2025-05-21_B.png"
+        },
+        {
+          "id": 19,
+          "name": "Promo Datos 1",
+          "image": "./gallery/ai_image_generation/Esmioptica_Promo-Datos-1.jpg"
+        },
+        {
+          "id": 20,
+          "name": "Promo Datos 2",
+          "image": "./gallery/ai_image_generation/Esmioptica_Promo-Datos-2.jpg"
+        },
+        {
+          "id": 21,
+          "name": "Promo Datos 3",
+          "image": "./gallery/ai_image_generation/Esmioptica_Promo-Datos-3.jpg"
+        },
+        {
+          "id": 22,
+          "name": "Promo Datos 4",
+          "image": "./gallery/ai_image_generation/Esmioptica_Promo-Datos-4.jpg"
+        },
+        {
+          "id": 23,
+          "name": "Promo Datos 5",
+          "image": "./gallery/ai_image_generation/Esmioptica_Promo-Datos-5.jpg"
+        },
+        {
+          "id": 24,
+          "name": "Servicio de Brigada Visual",
+          "image": "./gallery/ai_image_generation/Esmioptica_SERVICIO-DE-BRIGADA-VISUAL.png"
+        },
+        {
+          "id": 25,
+          "name": "Boton",
+          "image": "./gallery/ai_image_generation/Esmioptica_Boton.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Finanzas",
+      "category": "Desarrollo de Presentaciones",
+      "image": "./gallery/ai_image_generation/Finanzas_01_Brujula-financiera.jpg",
+      "resources_type": "image",
+      "resources": [
+        {
+          "id": 1,
+          "name": "Alcancia Rota",
+          "image": "./gallery/ai_image_generation/Finanzas_02_Alcancia-Rota.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Impulsa tu Equipo",
+          "image": "./gallery/ai_image_generation/Finanzas_Impulsa-tu-Equipo.png"
+        },
+        {
+          "id": 3,
+          "name": "Objetivos Ahorro",
+          "image": "./gallery/ai_image_generation/Finanzas_Objetivos-Ahorro.png"
+        },
+        {
+          "id": 4,
+          "name": "Brujula Financiera",
+          "image": "./gallery/ai_image_generation/Finanzas_01_Brujula-financiera.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Impresos",
+      "image": "./gallery/ai_image_generation/Impresos_Titanic-para-camisa_IMG-20250626-WA0223.jpg",
+      "resources_type": "image",
+      "resources": [
+        {
+          "id": 1,
+          "name": "Titanic para camisa",
+          "image": "./gallery/ai_image_generation/Impresos_Titanic-para-camisa_IMG-20250626-WA0223.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Jurasic Art",
+      "image": "./gallery/ai_image_generation/JurasicArt_dinoamor.jpg",
+      "resources_type": "image",
+      "resources": [
+        {
+          "id": 1,
+          "name": "Dinoamor",
+          "image": "./gallery/ai_image_generation/JurasicArt_dinoamor.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Arts & Avatars",
+      "image": "./gallery/ai_image_generation/Art_Love-is-the-answer-2025-05-11.png",
+      "resources_type": "image",
+      "resources": [
+        {
+          "id": 1,
+          "name": "Love is the answer",
+          "image": "./gallery/ai_image_generation/Art_Love-is-the-answer-2025-05-11.png"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "OTO Visual Flow",
+      "image": "./images/logo-escudo-oto.png",
+      "resources_type": "image",
+      "resources": [
+        {
+          "id": 1,
+          "name": "Banner Servicio Remoto",
+          "image": "./gallery/ai_image_generation/OTO_Banner-Servicio-Remoto-2025-06-20.png"
+        },
+        {
+          "id": 2,
+          "name": "Flyer",
+          "image": "./gallery/ai_image_generation/OTO_Flyer-2025-06-20.png"
+        },
+        {
+          "id": 3,
+          "name": "Flyer Presentaciones",
+          "image": "./gallery/ai_image_generation/OTO_Flyer-Presentaciones-2025-06-24.png"
+        },
+        {
+          "id": 4,
+          "name": "Flyer Servicios",
+          "image": "./gallery/ai_image_generation/OTO_Flyer-Servicios.png"
+        },
+        {
+          "id": 5,
+          "name": "Flyer Soluciones Creativas",
+          "image": "./gallery/ai_image_generation/OTO_Flyer-Soluciones-Creativas - 2025-06-20.png"
+        },
+        {
+          "id": 6,
+          "name": "Portada Linkedin",
+          "image": "./gallery/ai_image_generation/OTO_Portada-Linkedin.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Proyectos recientes",
+          "image": "./gallery/ai_image_generation/OTO_Proyectos-recientes-2025-06-25.png"
+        },
+        {
+          "id": 8,
+          "name": "Que hacemos A",
+          "image": "./gallery/ai_image_generation/OTO_Que-hacemos-2025-06-25_A.png"
+        },
+        {
+          "id": 9,
+          "name": "Que hacemos B",
+          "image": "./gallery/ai_image_generation/OTO_Que-hacemos-2025-06-25_B.png"
+        },
+        {
+          "id": 11,
+          "name": "Tarjeta presentacion A",
+          "image": "./gallery/ai_image_generation/OTO_Tarjeta-presentacion-2025-06-19_A.png"
+        },
+        {
+          "id": 12,
+          "name": "Tarjeta presentacion B",
+          "image": "./gallery/ai_image_generation/OTO_Tarjeta-presentacion-2025-06-19_B.png"
+        },
+        {
+          "id": 13,
+          "name": "Tarjeta presentacion C",
+          "image": "./gallery/ai_image_generation/OTO_Tarjeta-presentacion-2025-06-25.png"
+        }
+      ]
+    }
+  ]
+  

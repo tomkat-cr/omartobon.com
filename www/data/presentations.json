@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "name": "MedOffLine",
+        "description": "Asistente de AI enfocado a ofrecer orientación de primeros auxilios básicos en comunidades con acceso limitado o sin acceso a Internet",
+        "category": "Android App",
+        "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/MedOffLine.circled.logo.500.png?raw=true",
+        "urls": [
+            {
+                "name": "Articulo de LinkedIn sobre MedOffLine",
+                "url": "https://www.linkedin.com/pulse/medoffline-empoderando-comunidades-con-orientaci%25C3%25B3n-m%25C3%25A9dica-ramirez-spd4e/?trackingId=rha2U%2FUwT8%2BxSE2xsUQOyQ%3D%3D"
+            },
+            {
+                "name": "Sitio Web del Proyecto",
+                "url": "https://medoffline.streamlit.app/"
+            },
+            {
+                "name": "Repositorio del Proyecto",
+                "url": "https://github.com/tomkat-cr/medoffline"
+            },
+            {
+                "name": "Pagina de Entrega del Proyecto para el Hackathon",
+                "url": "https://lablab.ai/event/hackathon-llama-impact-pan-latam-es/the-fynbots/medoffline"
+            }
+        ],
+        "resources_type": "file",
+        "resources": [
+            {
+                "id": 1,
+                "name": "Presentacion en Español para el Hackathon",
+                "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/MedOffLine-cover-image-final-esp.png?raw=true",
+                "url": "https://github.com/tomkat-cr/medoffline/blob/e04c0675cf3afdc314b7696ce06038ee783cdd9f/assets/medoffline_presentacion_es.pdf?raw=true"
+            },
+            {
+                "id": 2,
+                "name": "Presentacion en Inglés para el Hackathon",
+                "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/MedOffLine-cover-image-final-eng.png?raw=true",
+                "url": "https://github.com/tomkat-cr/medoffline/blob/e04c0675cf3afdc314b7696ce06038ee783cdd9f/assets/medoffline_presentation_en.pdf?raw=true"
+            },
+            {
+                "id": 3,
+                "name": "Presentacion en la UDEA",
+                "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/MedOffLine-cover-image-final-esp.png?raw=true",
+                "url": "./gallery/presentation/medoffline.pptx"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Ahorro a Largo Plazo",
+        "description": "Presentacion sobre el ahorro a largo plazo",
+        "category": "Presentacion",
+        "image": "./gallery/ai_image_generation/Finanzas_Impulsa-tu-Equipo.png",
+        "resources_type": "file",
+        "resources": [
+            {
+                "id": 1,
+                "name": "Ahorro a Largo Plazo",
+                "image": "./gallery/ai_image_generation/Finanzas_01_Brujula-financiera.jpg",
+                "url": "./gallery/presentations/AhorroLargoPlazo.pptx"
+            }
+        ]
+    }
+]
