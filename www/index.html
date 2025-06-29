@@ -34,8 +34,10 @@
         </div>
     </header>
 
+    <div id="status-container" class="status-container"></div>
+
     <div id="content-placeholder">
-        <!-- El contenido se cargará aquí dinámicamente -->
+        <!-- {{PAGE_CONTENT}} -->
     </div>
 
     <section id="contacto" class="contact-section">
@@ -64,7 +66,15 @@
                     </label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
+                <input type="hidden" name="referrer" value="">
                 <button type="submit" class="btn btn-submit">Enviar Mensaje</button>
+                <script>
+                    document.querySelector('form').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        this.querySelector('input[name="referrer"]').value = document.location.href;
+                        this.submit();
+                    });
+                </script>
             </form>
         </div>
     </section>

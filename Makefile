@@ -10,7 +10,7 @@ install:
 	npm install
 
 run:
-	npm run dev
+	sh scripts/run_dev.sh
 
 publish:
 	sh scripts/mkdocs_transfer_site.sh

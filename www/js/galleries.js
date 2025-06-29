@@ -5,7 +5,7 @@
  * @param {string} options.jsonFilePath - The path to the JSON file containing the gallery data.
  * @param {string} [options.galleryElementId="gallery-container"] - The ID of the HTML element where the gallery will be shown.
  * @param {number} [options.folderColumns=4] - The number of columns for the gallery folders.
- * @param {string} [options.folderMargin="10px"] - The margin between gallery folders.
+ * @param {string} [options.folderMargin="30px"] - The margin between gallery folders.
  * @param {string} [options.thumbnailMargin="5px"] - The margin between resource thumbnails.
  * @param {boolean} [options.showGalleryThumbNames=true] - Whether to show the resource names in the thumbnails.
  * @param {string} [options.thumbnailSize="200px"] - The size of the resource thumbnails.
@@ -18,7 +18,7 @@ const linkOpenOption = "_self";
 export function createGallery(options) {
     const defaults = {
         galleryElementId: "gallery-container",
-        folderMargin: "10px",
+        folderMargin: "30px",
         thumbnailMargin: "10px",
         showGalleryThumbNames: true,
         thumbnailSize: "200px",

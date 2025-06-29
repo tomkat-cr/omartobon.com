@@ -39,14 +39,30 @@ Damos vida a tus ideas con avatares únicos y expresivos en formato de video, co
 
 ## Instalación
 
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/omartobon/omartobon.com.git
+```
+
+2. Instalar dependencias:
+
 ```bash
 make install
 ```
 
-## Ejecución
+## Desarrollo
+
+1. Ejecutar el sitio:
 
 ```bash
 make run
+```
+
+2. Acceder al sitio:
+
+```
+http://localhost:3000
 ```
 
 ## Publicación

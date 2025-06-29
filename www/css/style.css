@@ -476,6 +476,36 @@ p {
     transition: all 0.3s ease-in-out;
 }
 
+.status-container {
+    position: fixed;
+    /* top: 120px; */
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.status-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.status-container.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.status-container.error {
+    background-color: #f44336;
+    color: white;
+}
+
 @media (max-width: 768px) {
     .header {
         height: 60px;

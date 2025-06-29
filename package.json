@@ -7,6 +7,7 @@
     "dev": "vite"
   },
   "devDependencies": {
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vite-plugin-php": "^2.0.3"
   }
 }

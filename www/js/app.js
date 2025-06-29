@@ -31,14 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ga.then((jsCode) => {
             jsCode.createGallery({
                 jsonFilePath: galleries[path],
-                // galleryElementId: 'gallery-container',
-                // folderColumns: 4,
-                // folderRows: 10,
-                // folderMargin: '10px',
-                // thumbnailColumns: 4,
-                // thumbnailRows: 10,
-                // thumbnailMargin: '10px',
-                // thumbnailSize: '100px'
             });
         });
     };
@@ -63,9 +55,56 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+
+    const urlSplitter = (url) => {
+        const href = url ?? window.location.href;
+        const uri = href && href.indexOf('?') !== -1 ? href.substring(0, href.indexOf('?')) : href;
+        const host = uri && uri.indexOf('#') !== -1 ? uri.substring(0, uri.indexOf('#')) : uri;
+        const path = uri && uri.indexOf('#') !== -1 ? uri.substring(uri.indexOf('#')+1) : uri;
+        const queryParams = href && href.indexOf('?') !== -1 ? href.substring(href.indexOf('?') + 1) : '';
+        const params = queryParams.split('&').reduce((acc, param) => {
+            const [key, value] = param.split('=');
+            acc[key] = value;
+            return acc;
+        }, {});
+        return {
+            'uri': uri,
+            'host': host,
+            'path': path,
+            'params': params
+        };
+    }
+
     const router = () => {
-        const path = window.location.hash.substring(1);
+        const { uri, host, path, params } = urlSplitter(window.location.href);
+        const status = params['status'];
+        const debug = params['dbg'];
+        if (debug) {
+            console.log('>> Status:', status, '\nHREF:', window.location.href, '\nparams', params, '\nuri', uri, '\nhost', host, '\npath', path);
+        }
+        if (status) {
+            showStatus(status);
+        }
         loadContent(path);
+    };
+
+    const showStatus = (status) => {
+        const statusContainer = document.getElementById('status-container');
+        if (statusContainer) {
+            statusContainer.innerHTML = decodeURIComponent(status);
+            if (status.toLowerCase().includes('error')) {
+                statusContainer.classList.add('error');
+            } else {
+                statusContainer.classList.add('success');
+            }
+            statusContainer.classList.add('show');
+            setTimeout(() => {
+                statusContainer.classList.remove('show');
+                // Remove the status parameter from the URL
+                const { uri, host, path, params } = urlSplitter(window.location.href);
+                window.history.replaceState(null, '', host + "#" + path);
+            }, 5000);
+        }
     };
 
     // Load content on initial page load
