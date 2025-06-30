@@ -1,6 +1,8 @@
 const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 const phpScriptPrefix = isLocalhost ? 'www/' : '';
 
+const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling para los enlaces del menú
     document.querySelectorAll('nav-menu ul li a').forEach(anchor => {

@@ -11,9 +11,7 @@
  * @param {string} [options.thumbnailSize="200px"] - The size of the resource thumbnails.
  */
 
-
-// const linkOpenOption = "_blank";
-const linkOpenOption = "_self";
+const linkOpenOption = isMobileDevice ? "_self" : "_blank";
 
 export function createGallery(options) {
     const defaults = {
