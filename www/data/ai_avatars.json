@@ -1,0 +1,95 @@
+
+[
+  {
+    "id": 1,
+    "name": "Camindra",
+    "image": "./gallery/ai_avatars/Camindra_Thumb.jpg",
+    "resources_type": "video",
+    "resources": [
+      {
+        "id": 1,
+        "name": "Camindra Lemon Slice",
+        "image": "./gallery/ai_avatars/Camindra_Thumb.jpg",
+        "url": "./gallery/ai_avatars/Camindra_Lemon-Slice_cfb0e.mp4"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Jurasic Art",
+    "image": "./gallery/ai_image_generation/JurasicArt_dinoamor.jpg",
+    "resources_type": "video",
+    "resources": [
+      {
+        "id": 1,
+        "name": "Conoce el Mundo de los Dinosaurios",
+        "image": "./gallery/ai_avatars/JurasicArt_Conoce-el-Mundo-de-los-Dinosaurios-Thumb.png",
+        "url": "./gallery/ai_avatars/JurasicArt_Conoce-el-Mundo-de-los-Dinosaurios.mp4"
+      },
+      {
+        "id": 2,
+        "name": "Conoce al T-Rex",
+        "image": "./gallery/ai_avatars/JurasicArt_Conoce-T-Rex-Thumb.png",
+        "url": "./gallery/ai_avatars/JurasicArt_Conoce-T-Rex-VID-20250626-WA0005.mp4"
+      },
+      {
+        "id": 3,
+        "name": "Dino Video Cartilla",
+        "image": "./gallery/ai_avatars/JurasicArt_Dino-Painter-2025-05-13.png",
+        "url": "./gallery/ai_avatars/JurasicArt_Dino-Video-Cartilla.mp4"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "OTO",
+    "image": "./images/logo-escudo-oto.png",
+    "resources_type": "video",
+    "resources": [
+      {
+        "id": 1,
+        "name": "Dama Paisa",
+        "image": "./gallery/ai_avatars/OTO_Dama-Paisa-Thumb.png",
+        "url": "./gallery/ai_avatars/OTO_Dama-Paisa-Lemon-Slice_d19fa.mp4"
+      },
+      {
+        "id": 2,
+        "name": "Mama No Olvides",
+        "image": "./gallery/ai_avatars/OTO_Mama-No-Olvides-Thumb.png",
+        "url": "./gallery/ai_avatars/OTO_Mama-No-Olvides-VID-20250626-WA0006.mp4"
+      },
+      {
+        "id": 3,
+        "name": "Te Amo",
+        "image": "./gallery/ai_avatars/OTO_Te-Amo-Thumb-2025-05-11.png",
+        "url": "./gallery/ai_avatars/OTO_Te-Amo-VID-20250626-WA0007.mp4"
+      },
+      {
+        "id": 1,
+        "name": "La Foto",
+        "image": "./gallery/ai_avatars/Random_E-Thumb.png",
+        "url": "./gallery/ai_avatars/Random_E-La-Foto-Lemon-Slice_9d60c.mp4"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Esmioptica",
+    "image": "./gallery/ai_image_generation/Esmioptica_Boton.jpg",
+    "resources_type": "video",
+    "resources": [
+      {
+        "id": 1,
+        "name": "Promo Datos # 1",
+        "image": "./gallery/ai_image_generation/Esmioptica_Promo-Datos-1.jpg",
+        "url": "./gallery/videos/Esmioptica_Promo-Datos-1.mp4"
+      },
+      {
+        "id": 2,
+        "name": "Promo Datos # 2",
+        "image": "./gallery/ai_image_generation/Esmioptica_Post-Instagram-Oferta-2x1.png",
+        "url": "./gallery/videos/Esmioptica_Promo-Datos-2.mp4"
+      }
+    ]
+  }
+]

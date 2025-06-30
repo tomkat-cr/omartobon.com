@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTO Visual Flow - Tu Creatividad en Movimiento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/galleries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo-oto-visual-flow.png" alt="OTO Visual Flow Logo">
+                </a>
+            </div>
+            <button class="hamburger-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#customer-success">Customer Success</a></li>
+                    <li><a href="#imagenes-ia">Imágenes con IA</a></li>
+                    <li><a href="#avatares-animados">Avatares Animados</a></li>
+                    <li><a href="#presentaciones">Presentaciones</a></li>
+                    <li><a href="#prompts-estrategicos">Prompts Estratégicos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="status-container" class="status-container"></div>
+
+    <div id="content-placeholder">
+        <!-- {{PAGE_CONTENT}} -->
+    </div>
+
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2>Ponte en Contacto</h2>
+            <p>¿Listo para llevar tu proyecto al siguiente nivel? ¡Hablemos!</p>
+            <form action="php/contact.php" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">
+                        <img src="images/icon-person.svg" alt="Nombre" class="form-icon">
+                        Nombre
+                    </label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">
+                        <img src="images/icon-mail.svg" alt="Email" class="form-icon">
+                        Email
+                    </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">
+                        <img src="images/icon-message.svg" alt="Mensaje" class="form-icon">
+                        Mensaje
+                    </label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div id="recaptcha-container"></div>
+                <br/>
+                <input type="hidden" name="referrer" value="">
+                <button type="submit" class="btn btn-submit">Enviar Mensaje</button>
+                <script>
+                    document.querySelector('form').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        this.querySelector('input[name="referrer"]').value = document.location.href;
+                        this.submit();
+                    });
+                </script>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-contact">
+                <p><img src="images/icon-whatsapp.svg" alt="WhatsApp" class="form-icon"> Teléfono / WhatsApp: +57 313-560-0347</p>
+                <p><img src="images/icon-location.svg" alt="Location" class="form-icon"> Medellín, Colombia</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/omar.tobon1" target="_blank"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+                <a href="https://www.facebook.com/omar.tobon1/" target="_blank"><img src="images/icon-facebook.svg" alt="Facebook"></a>
+            </div>
+            <p class="copyright">&copy; 2025 OTO VISUAL FLOW. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/recaptcha.js"></script>
+</body>
+</html>
