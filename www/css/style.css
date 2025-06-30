@@ -168,7 +168,7 @@ p {
 /* --- Sección de Bienvenida (Hero Section) --- */
 .hero-section {
     position: relative;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -506,6 +506,26 @@ p {
     color: white;
 }
 
+.fade-in-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.g-recaptcha {
+    display: none;
+}
+
+.g-recaptcha-error {
+    background-color: #f44336;
+    color: white;
+}
+
 @media (max-width: 768px) {
     .header {
         height: 60px;
@@ -560,7 +580,7 @@ p {
     }
 
     .hero-section {
-        padding-top: 60px;
+        padding-top: 70px;
     }
 
     .hero-content h2 {
@@ -594,15 +614,4 @@ p {
     .section-card {
         padding: 1.5rem;
     }
-}
-
-.fade-in-hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
 }

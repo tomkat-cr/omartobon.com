@@ -1,4 +1,5 @@
 const ga = import('./galleries.js');
+let debug = false;
 
 document.addEventListener('DOMContentLoaded', () => {
     const contentPlaceholder = document.getElementById('content-placeholder');
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const appendGallery = (path) => {
         if (!galleries[path]) {
-            console.warn('Gallery not found for path:', path);
+            if (debug) console.warn('Gallery not found for path:', path);
             return;
         }
         const galleryContainer = document.getElementById('gallery-container');
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const router = () => {
         const { uri, host, path, params } = urlSplitter(window.location.href);
         const status = params['status'];
-        const debug = params['dbg'];
+        debug = params['dbg'];
         if (debug) {
             console.log('>> Status:', status, '\nHREF:', window.location.href, '\nparams', params, '\nuri', uri, '\nhost', host, '\npath', path);
         }

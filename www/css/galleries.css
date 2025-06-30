@@ -221,6 +221,10 @@
 
 /* Mobile */
 @media (max-width: 767px) {
+    .hero-content img {
+        max-height: 42vh;
+    }
+
     .gallery-grid-container {
         grid-template-columns: 1fr;
     }

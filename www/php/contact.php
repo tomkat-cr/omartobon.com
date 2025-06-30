@@ -4,6 +4,8 @@
  * 2025-06-28 | CR
  * 
  */
+require_once __DIR__ . '/env_loader.php';
+
 class Contact {
     private $referrer;
     private $debug = false;
@@ -208,6 +210,36 @@ class Contact {
         $email = $_POST['email'];
         $message = $_POST['message'];
         $this->referrer = $_POST['referrer'];
+
+        // reCAPTCHA verification
+        $recaptcha_secret = getenv('RECAPTCHA_SECRET_KEY');
+        if (!$recaptcha_secret) {
+            $this->sendResult('Error: reCAPTCHA secret key no configurada');
+        }
+
+        if (isset($_POST['g-recaptcha-response'])) {
+            $recaptcha_response = $_POST['g-recaptcha-response'];
+        } else {
+            $this->sendResult('Error: Por favor, complete el reCAPTCHA.');
+        }
+
+        $verify_url = 'https://www.google.com/recaptcha/api/siteverify';
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $verify_url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
+            'secret' => $recaptcha_secret,
+            'response' => $recaptcha_response
+        ]));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($ch);
+        curl_close($ch);
+        $response_data = json_decode($response);
+
+        if (!$response_data->success) {
+            $this->sendResult('Error: Verificación de reCAPTCHA fallida. Intente de nuevo.');
+        }
+
     
         // Validate data
         if (empty($name) || empty($email) || empty($message)) {

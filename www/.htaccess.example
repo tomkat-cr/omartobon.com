@@ -5,6 +5,10 @@
 </IfModule>
 # php -- END cPanel-generated handler, do not edit
 
+# Google reCAPTCHA Keys
+SetEnv RECAPTCHA_SITE_KEY "your_site_key_here"
+SetEnv RECAPTCHA_SECRET_KEY "your_secret_key_here"
+
 # Set envvars
 SetEnv TARGET_EMAIL "your-email@your-domain.com"
 
