@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loadRecaptcha(siteKey);
     } else {
         // Fetch recaptcha key from config.php, load it and save it in localStorage
-        fetch('php/config.php')
+        fetch(`${phpScriptPrefix}php/config.php`)
             .then(response => response.json())
             .then(data => {
                 loadRecaptcha(data.siteKey);
