@@ -22,6 +22,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a Ch
 
 ### Fixes
 - Fix "#contacto" link in home.html.
+- Fix the curl CURLOPT_MAIL_FROM in contact.php to match the SMTP username abd avoid emails to be marked as spam.
 
 
 ## 1.1.0 (2025-06-29)

@@ -71,7 +71,8 @@ class Contact {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
         curl_setopt($ch, CURLOPT_USERPWD, $smtp_config['username'] . ':' . $smtp_config['password']);
-        curl_setopt($ch, CURLOPT_MAIL_FROM, $from);
+        // curl_setopt($ch, CURLOPT_MAIL_FROM, $from);
+        curl_setopt($ch, CURLOPT_MAIL_FROM, $smtp_config['username']);
         curl_setopt($ch, CURLOPT_MAIL_RCPT, [$to]);
         curl_setopt($ch, CURLOPT_READDATA, fopen($temp_file, 'r'));
         curl_setopt($ch, CURLOPT_UPLOAD, true);
