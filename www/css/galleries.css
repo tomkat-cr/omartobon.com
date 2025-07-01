@@ -265,12 +265,13 @@
     }
 
     .gallery-details-image img {
-        max-width: 150px;
+        max-width: 250px;
+        margin-bottom: 10px;
     }
 
-    .gallery-details h2, .gallery-details-text p {
+    /* .gallery-details h2, .gallery-details-text p {
         text-align: center;
-    }
+    } */
 
     .resources-container {
         grid-template-columns: repeat(2, 1fr); /* 2 columns for thumbnails */

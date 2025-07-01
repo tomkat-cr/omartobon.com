@@ -64,64 +64,6 @@ export function createGallery(options) {
         });
 }
 
-/**
- * Displays the gallery folders in the specified container.
- * @param {Array<object>} galleries - The array of gallery objects.
- * @param {HTMLElement} container - The container element to display the folders in.
- * @param {object} config - The gallery configuration.
- */
-function displayGalleryInline(gallery, config) {
-    const folderGalleryContainer = document.getElementById('folder-gallery-container');
-    const modalGalleryContainer = document.getElementById('modal-gallery-container');
-
-    if (!folderGalleryContainer || !modalGalleryContainer) {
-        console.error("Gallery containers not found.");
-        return;
-    }
-
-    // Hide folders and show inline gallery
-    folderGalleryContainer.style.display = 'none';
-    modalGalleryContainer.innerHTML = ''; // Clear previous content
-    modalGalleryContainer.style.display = 'block';
-
-    // Create a back button
-    const backButton = document.createElement('button');
-    backButton.className = 'back-to-folders-btn';
-    backButton.textContent = '← Back to Galleries';
-    backButton.onclick = () => {
-        modalGalleryContainer.style.display = 'none';
-        folderGalleryContainer.style.display = 'grid'; // Or 'block' depending on original style
-    };
-
-    // Create gallery details
-    const galleryDetails = document.createElement('div');
-    galleryDetails.className = 'gallery-details';
-    galleryDetails.innerHTML = `
-<div class="gallery-details">
-    ${gallery.image ? `<div class="gallery-details-image">
-        <img src="${gallery.image}" alt="${gallery.name ?? ''}">` : ''}
-    </div>
-    <div class="gallery-details-text">
-        ${gallery.name ? `<h2>${gallery.name}</h2>` : ''}
-        ${gallery.description ? `<p>${gallery.description}</p>` : ''}
-        ${gallery.category ? `<p><strong>Category:</strong> ${gallery.category}</p>` : ''}
-    </div>
-</div>`;
-
-    // Create resources container
-    const resourcesContainer = document.createElement('div');
-    resourcesContainer.id = 'resources-container';
-    resourcesContainer.className = 'resources-container resources-grid-container';
-
-    // Append elements
-    modalGalleryContainer.appendChild(backButton);
-    modalGalleryContainer.appendChild(galleryDetails);
-    modalGalleryContainer.appendChild(resourcesContainer);
-
-    // Display thumbnails
-    displayResourceThumbnails(gallery, resourcesContainer, config);
-}
-
 function displayGalleryFolders(galleries, container, config) {
     container.innerHTML = ''; // Clear previous content
 

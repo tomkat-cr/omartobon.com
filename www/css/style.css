@@ -236,10 +236,16 @@ p {
     text-align: center;
 }
 
+.main-content-vertical h3 {
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6); /* Pequeño brillo al título */
+    text-align: left;
+}
+
 .main-content-vertical p {
     /* font-size: 1.4rem; */
     opacity: 0.9;
-    margin-bottom: 2rem;
+    /* margin-bottom: 0.1rem; */
 }
 
 .main-content-vertical ul {

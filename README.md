@@ -20,7 +20,7 @@ Diseñamos imágenes impactantes, únicas y personalizadas con herramientas de I
 
 ### Presentaciones en PowerPoint y Canva 
 
-Desarrollamos presentaciones animadas, narrativas y 100% personalizadas. Diapositivas con storytelling visual para ventas, formación, lanzamientos o portafolios de alto impacto. 
+Desarrollamos presentaciones en PowerPoint y Canva, narrativas y 100% personalizadas. Diapositivas con storytelling visual para ventas, formación, lanzamientos o portafolios de alto impacto. 
 
 ### Prompts Estratégicos de Producto y Marca 
 
