@@ -317,13 +317,12 @@ class MailService {
 
     function fix_message($body) {
         $result = html_entity_decode($body);
-        $result = str_replace("\r\n", "\n", $result);
-        $result = str_replace("<br>", "\n", $result);
-        $result = str_replace("<br />", "\n", $result);
-        $result = str_replace("<br/>", "\n", $result);
-        $result = str_replace("<BR>", "\n", $result);
-        $result = str_replace("<BR />", "\n", $result);
-        $result = str_replace("<BR/>", "\n", $result);
+        $result = str_replace("<br>", "\r\n", $result);
+        $result = str_replace("<br />", "\r\n", $result);
+        $result = str_replace("<br/>", "\r\n", $result);
+        $result = str_replace("<BR>", "\r\n", $result);
+        $result = str_replace("<BR />", "\r\n", $result);
+        $result = str_replace("<BR/>", "\r\n", $result);
         return $result;
     }
 
