@@ -2,19 +2,6 @@ const loadRecaptcha = (siteKey) => {
     if (siteKey) {
         const recaptchaContainer = document.getElementById('recaptcha-container');
 
-        // const recaptchaDataSitekeyElement = document.getElementById('recaptcha-data-sitekey');
-        // if (recaptchaDataSitekeyElement) {
-        //     recaptchaDataSitekeyElement.setAttribute('data-sitekey', siteKey);
-        // } else {
-        //     console.error('reCAPTCHA data-sitekey element not found.');
-        //     if(recaptchaContainer) {
-        //         recaptchaContainer.innerHTML = '<p class="g-recaptcha-error">reCAPTCHA could not be loaded [3].</p>';
-        //     } else {
-        //         console.error('reCAPTCHA container not found.');
-        //     }
-        //     return;
-        // }
-
         window.onloadRecaptchaCallback = function() {
             grecaptcha.render(recaptchaContainer, {
                 'sitekey' : siteKey
