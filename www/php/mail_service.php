@@ -11,12 +11,20 @@ class MailService {
     protected $referrer;
     protected $debug = false;
     protected $boundary_string = 'MULTIPART-MIXED-BOUNDARY';
+    protected $response_mode = 'json'; // 'redirect' or 'json'
 
-    function __construct() {
+    function __construct($response_mode = 'json') {
         $this->debug = getDebugflag();
+        $this->response_mode = $response_mode;
     }
 
-    function sendResult($status) {
+    function sendResult($status, $error = true) {
+        if ($this->response_mode == 'json') {
+            $result = $this->get_std_result(!$error, $status);
+            echo json_encode($result);
+            exit;
+        }
+
         // Toma la URL que llamo al script (el referrer)
         if (!$this->referrer) {
             try {
@@ -306,4 +314,11 @@ class MailService {
         }
         return $result;
     }
+
+    function fix_message($body) {
+        $result = html_entity_decode($body);
+        $result = str_ireplace(['<br>', '<br />', '<br/>'], "\r\n", $result);
+        return $result;
+    }
+
 }
