@@ -47,6 +47,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a Ch
 - Galleries.js open images on a new page if it's desktop, and the same page if it's mobile.
 - Images order on Image Gen AI (MedoffLine).
 - Enhance page's description and texts of: avatares animados, customer success and presentaciones.
+- Refactor: extract contact form logic into ContactService class and add JSON response mode
 
 ### Fixed
 - Fix "#contacto" link in home.html.
