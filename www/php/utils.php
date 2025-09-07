@@ -12,7 +12,7 @@ function isAllowedReferrer($referrer = null) {
             return false;
         }
     }
-    $allowedReferrersString = $_SERVER['ALLOWED_REFERRERS'] ?? '';
+    $allowedReferrersString = getenv('ALLOWED_REFERRERS') ?: '';
     $allowedReferrers = explode(',', $allowedReferrersString);
     foreach ($allowedReferrers as $allowedReferrer) {
         // Check if referrer starts with allowed referrer

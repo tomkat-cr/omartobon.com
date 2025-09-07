@@ -12,7 +12,13 @@ stop: down
 restart: down up
 
 logs:
-	docker-compose logs
+	bash ./local_test_run.sh logs
 
 logs-f:
-	docker-compose logs -f
+	bash ./local_test_run.sh logs-f
+
+init-config:
+	bash ./local_test_run.sh init-config
+
+restore-htaccess:
+	bash ./local_test_run.sh restore-htaccess

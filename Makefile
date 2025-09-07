@@ -10,10 +10,15 @@ install:
 	npm install
 
 run-dev:
-	sh scripts/run_dev.sh
+	bash scripts/run_dev.sh
 
-publish:
-	sh scripts/ftp_transfer_site.sh
+publish-local:
+	bash scripts/ftp_transfer_site.sh local
+
+publish-cicd:
+	bash scripts/ftp_transfer_site.sh cicd
+
+publish: publish-local
 
 # Docker Apache local test environment
 
@@ -32,3 +37,9 @@ logs:
 
 logs-f:
 	cd local_apache && docker-compose logs -f
+
+init-config:
+	cd local_apache && bash ./local_test_run.sh init-config
+
+restore-htaccess:
+	cd local_apache && bash ./local_test_run.sh restore-htaccess

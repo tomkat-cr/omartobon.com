@@ -81,7 +81,7 @@ class MailService {
         $mail_content .= '--' . $this->boundary_string . "\r\n";
         $mail_content .= "Content-Type: text/plain; charset=\"UTF-8\"" . "\r\n";
         $mail_content .= "Content-Transfer-Encoding: 8bit" . "\r\n";
-        // $mail_content .= "\r\n";
+        $mail_content .= "\r\n";
         $mail_content .= $body;
 
         if ($attachments) {
@@ -232,7 +232,7 @@ class MailService {
     function get_attachments($attachment_names = ['attachment']) {
         $attachments = [];
         foreach ($attachment_names as $attachment_name) {
-            if (!isset($_FILES[$attachment_name])) {
+            if (!isset($_FILES[$attachment_name]) || $_FILES[$attachment_name]['error'] !== UPLOAD_ERR_OK) {
                 continue;
             }
             $attachments[] = [

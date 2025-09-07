@@ -53,7 +53,7 @@ SetEnv SMTP_PASSWORD "your-password"
 # CORS configuration
 
 <IfModule mod_headers.c>
-  # Header set Access-Control-Allow-Origin "http://localhost:8080"
+  Header set Access-Control-Allow-Origin "http://localhost:8080"
   Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
   Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
   Header always set Access-Control-Allow-Credentials "true"
