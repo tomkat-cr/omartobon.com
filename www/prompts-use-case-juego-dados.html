@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Interactivo: Prompting Estratégico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutral -->
+    <!-- Application Structure Plan: He diseñado una aplicación de página única con un flujo narrativo. Comienza con la tesis (la calidad del prompt importa), presenta el caso de estudio ("Lanza el Dado"), y luego ofrece la sección principal: un explorador interactivo donde el usuario puede hacer clic en los principios estratégicos (el "Porqué", "Cómo", etc.) para resaltar la sección correspondiente del prompt y ver el análisis. Esto transforma un blog lineal en una experiencia de aprendizaje exploratoria, demostrando visualmente la conexión entre la teoría y la práctica. Termina con los resultados y las lecciones aprendidas de forma visual. Esta estructura está diseñada para mejorar la comprensión y el engagement del usuario. -->
+    <!-- Visualization & Content Choices: 
+        - Report Info: El texto completo del prompt. -> Goal: Organizar/Hacer digerible. -> Viz/Method: Acordeón interactivo con HTML/JS/Tailwind. -> Interaction: Clic para expandir/colapsar secciones. -> Justification: Evita un muro de texto, permitiendo al usuario enfocarse en una parte del prompt a la vez. -> Library: Vanilla JS.
+        - Report Info: Los 4 principios de análisis (Porqué, Cómo, Reglas, Arquitectura). -> Goal: Mostrar la relación entre el análisis y el prompt. -> Viz/Method: Sección de análisis vinculada al acordeón del prompt. -> Interaction: Al hacer clic en un principio, se expande la sección relevante del prompt, se resalta y se muestra el texto explicativo. -> Justification: Es el núcleo interactivo de la aplicación. Crea una conexión directa y visual entre el concepto abstracto y el ejemplo concreto, reforzando el mensaje principal del artículo. -> Library: Vanilla JS.
+        - Report Info: Los resultados y lecciones aprendidas. -> Goal: Informar/Resumir. -> Viz/Method: Tarjetas visuales en un layout de rejilla (grid). -> Interaction: Estático. -> Justification: Presenta los puntos clave de una manera más atractiva y fácil de escanear que los párrafos o listas. -> Library: N/A.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .highlight-section {
+            transition: all 0.5s ease-in-out;
+            background-color: #FEF3C7; /* bg-amber-100 */
+            border-left-color: #D97706; /* border-amber-600 */
+        }
+        .prompt-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        }
+        .prompt-content.open {
+            max-height: 1000px; /* Adjust as needed */
+        }
+        .analysis-card.active {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            border-color: #D97706; /* border-amber-600 */
+        }
+    </style>
+</head>
+<body class="bg-stone-100 text-stone-800">
+
+    <div class="container mx-auto px-4 py-8 md:py-16">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12 md:mb-20">
+            <h1 class="text-4xl md:text-6xl font-bold text-amber-600 mb-2">Prompting Estratégico</h1>
+            <p class="text-lg md:text-xl text-stone-600 max-w-3xl mx-auto">De una Idea de Negocio a Código Funcional con IA: Un Caso de Estudio Interactivo.</p>
+        </header>
+
+        <!-- Main Interactive Section -->
+        <main class="bg-white rounded-2xl shadow-xl p-6 md:p-10">
+            
+            <div class="text-center mb-10">
+                 <h2 class="text-3xl font-bold mb-2">El Caso de Estudio: "Lanza el Dado y Gana"</h2>
+                 <p class="text-stone-600 max-w-4xl mx-auto">Esta aplicación fue generada a partir de un prompt detallado que no solo pedía una función, sino que definía un proyecto completo. A continuación, exploraremos cómo la estructura de ese prompt fue la clave para un resultado exitoso. Analizaremos los principios estratégicos y su aplicación directa en el texto del prompt.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+
+                <!-- Left Column: Strategic Analysis -->
+                <div class="lg:sticky top-8 self-start">
+                    <h3 class="text-2xl font-bold mb-4">Principios del Prompt Estratégico</h3>
+                    <p class="text-stone-600 mb-6">Haz clic en cada principio para ver cómo se aplicó en el prompt original y por qué fue tan efectivo.</p>
+                    <div id="analysis-container" class="space-y-4">
+                        <!-- Analysis Card 1 -->
+                        <div class="analysis-card border-l-4 border-stone-200 bg-stone-50 p-5 rounded-lg cursor-pointer transition-all duration-300 shadow-sm hover:shadow-md" data-target="prompt-intro">
+                            <h4 class="font-bold text-lg text-amber-600">1. Definir el "Porqué" (Objetivos)</h4>
+                            <p class="analysis-text hidden mt-2 text-stone-700">El prompt explica el propósito del negocio: captar leads y dirigir tráfico. Este contexto guía a la IA para tomar decisiones alineadas con la meta final, transformando la tarea de "crear un juego" a "crear una herramienta de marketing".</p>
+                        </div>
+                        <!-- Analysis Card 2 -->
+                        <div class="analysis-card border-l-4 border-stone-200 bg-stone-50 p-5 rounded-lg cursor-pointer transition-all duration-300 shadow-sm hover:shadow-md" data-target="prompt-flow">
+                            <h4 class="font-bold text-lg text-amber-600">2. Describir el "Cómo" (Flujo de Usuario)</h4>
+                            <p class="analysis-text hidden mt-2 text-stone-700">Detallar el flujo paso a paso actúa como un guion. Elimina la ambigüedad y proporciona una estructura lógica clara para la experiencia de usuario, desde el inicio hasta el final.</p>
+                        </div>
+                        <!-- Analysis Card 3 -->
+                        <div class="analysis-card border-l-4 border-stone-200 bg-stone-50 p-5 rounded-lg cursor-pointer transition-all duration-300 shadow-sm hover:shadow-md" data-target="prompt-rules">
+                            <h4 class="font-bold text-lg text-amber-600">3. Establecer Reglas (Lógica de Negocio)</h4>
+                            <p class="analysis-text hidden mt-2 text-stone-700">Restricciones como "un lanzamiento por email" o "probabilidades configurables" son cruciales. Transforman una simple animación en una aplicación robusta y segura que cumple los objetivos de negocio.</p>
+                        </div>
+                         <!-- Analysis Card 4 -->
+                        <div class="analysis-card border-l-4 border-stone-200 bg-stone-50 p-5 rounded-lg cursor-pointer transition-all duration-300 shadow-sm hover:shadow-md" data-target="prompt-tech">
+                            <h4 class="font-bold text-lg text-amber-600">4. Separar Responsabilidades (Arquitectura)</h4>
+                            <p class="analysis-text hidden mt-2 text-stone-700">Dividir los requisitos en Front-end, Back-end y Panel de Administración le indica a la IA que piense como un arquitecto. Anticipa las necesidades operativas y asegura una solución completa, no solo una interfaz bonita.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: The Original Prompt -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">El Prompt Original (Desglosado)</h3>
+                    <div id="prompt-accordion" class="border border-stone-200 rounded-lg">
+                        
+                        <!-- Section 1: Intro -->
+                        <div id="prompt-intro" class="prompt-section border-b border-stone-200">
+                            <button class="prompt-header w-full text-left p-4 font-semibold text-lg flex justify-between items-center bg-stone-50 hover:bg-stone-100 transition">
+                                1. Introducción y Objetivos
+                                <span class="arrow text-amber-600 text-2xl transform transition-transform duration-300">›</span>
+                            </button>
+                            <div class="prompt-content">
+                                <div class="p-4 bg-white">
+                                    <p class="text-sm text-stone-600"><strong>Descripción:</strong> Buscamos crear una experiencia digital interactiva que replique y potencie nuestra promoción actual "Lanza el Dado y Gana". El objetivo principal es generar engagement online, captar nuevos leads (correos electrónicos) y dirigir tráfico cualificado a nuestra tienda física.</p>
+                                    <p class="font-semibold mt-3 mb-1">Objetivos Clave:</p>
+                                    <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                        <li>Aumentar la captación de correos electrónicos.</li>
+                                        <li>Incrementar las visitas y ventas en tienda.</li>
+                                        <li>Fortalecer la imagen de marca.</li>
+                                        <li>Generar una experiencia memorable.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Flow -->
+                        <div id="prompt-flow" class="prompt-section border-b border-stone-200">
+                            <button class="prompt-header w-full text-left p-4 font-semibold text-lg flex justify-between items-center bg-stone-50 hover:bg-stone-100 transition">
+                                2. Flujo del Usuario
+                                 <span class="arrow text-amber-600 text-2xl transform transition-transform duration-300">›</span>
+                            </button>
+                             <div class="prompt-content">
+                                <div class="p-4 bg-white">
+                                    <p class="font-semibold mb-1">Paso a Paso:</p>
+                                     <ul class="list-decimal list-inside text-sm text-stone-600 space-y-1">
+                                        <li>El usuario llega a la página del juego.</li>
+                                        <li>Ve una interfaz atractiva con un dado virtual.</li>
+                                        <li>Hace clic en "Lanzar el Dado".</li>
+                                        <li>El dado gira y se detiene mostrando un número.</li>
+                                        <li>El sistema asigna un premio.</li>
+                                        <li>Se solicita correo electrónico para recibir código.</li>
+                                        <li>El usuario recibe un email automático con el código.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 3: Rules -->
+                        <div id="prompt-rules" class="prompt-section border-b border-stone-200">
+                            <button class="prompt-header w-full text-left p-4 font-semibold text-lg flex justify-between items-center bg-stone-50 hover:bg-stone-100 transition">
+                                3. Premios y Reglas
+                                 <span class="arrow text-amber-600 text-2xl transform transition-transform duration-300">›</span>
+                            </button>
+                            <div class="prompt-content">
+                               <div class="p-4 bg-white">
+                                    <p class="font-semibold mb-1">Reglas Clave:</p>
+                                     <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                         <li><strong>Premios:</strong> Asignar premios específicos a cada número del dado.</li>
+                                         <li><strong>Probabilidad:</strong> La probabilidad de cada premio debe ser configurable.</li>
+                                         <li><strong>Restricción:</strong> Un (1) lanzamiento por dirección de correo electrónico.</li>
+                                         <li><strong>Vigencia:</strong> Cada código de premio tendrá una fecha de caducidad.</li>
+                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 4: Tech -->
+                        <div id="prompt-tech" class="prompt-section">
+                            <button class="prompt-header w-full text-left p-4 font-semibold text-lg flex justify-between items-center bg-stone-50 hover:bg-stone-100 transition">
+                                4. Requisitos Técnicos
+                                 <span class="arrow text-amber-600 text-2xl transform transition-transform duration-300">›</span>
+                            </button>
+                             <div class="prompt-content">
+                               <div class="p-4 bg-white">
+                                     <ul class="list-disc list-inside text-sm text-stone-600 space-y-2">
+                                         <li><strong>Front-end:</strong> Diseño responsivo, interfaz atractiva, animación de dado fluida.</li>
+                                         <li><strong>Back-end:</strong> Lógica de juego, generación de códigos, base de datos para correos/códigos, sistema de envío de emails.</li>
+                                         <li><strong>Panel de Administración:</strong> Panel simple para ver códigos y marcarlos como "redimidos".</li>
+                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Result Section -->
+        <section class="mt-12 md:mt-20 text-center">
+            <h2 class="text-3xl font-bold mb-2">El Resultado: Código que Refleja la Estrategia</h2>
+            <p class="text-stone-600 max-w-3xl mx-auto mb-8">Al alimentar a la IA con este prompt detallado, el código generado fue una traducción casi literal de los requisitos. Implementó:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-3xl mb-3">🖥️</div>
+                    <h4 class="font-bold text-lg">Interfaz de Usuario</h4>
+                    <p class="text-sm text-stone-600">Una interfaz HTML/CSS/JS completa para la interacción del usuario.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-3xl mb-3">🎲</div>
+                    <h4 class="font-bold text-lg">Lógica de Juego</h4>
+                    <p class="text-sm text-stone-600">JavaScript para la animación del dado y asignación de premios.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-3xl mb-3">✉️</div>
+                    <h4 class="font-bold text-lg">Captura de Leads</h4>
+                    <p class="text-sm text-stone-600">Un formulario funcional para la captura de correos electrónicos.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-3xl mb-3">⚙️</div>
+                    <h4 class="font-bold text-lg">Listo para Backend</h4>
+                    <p class="text-sm text-stone-600">La estructura base para una futura integración con una base de datos.</p>
+                </div>
+            </div>
+            <a href="https://github.com/otobonh/esmioptica-dados" target="_blank" class="mt-8 inline-block bg-amber-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-amber-700 transition-colors">
+                Ver Código en GitHub
+            </a>
+        </section>
+
+        <!-- Lessons Learned Section -->
+        <section class="mt-12 md:mt-20">
+            <h2 class="text-3xl font-bold text-center mb-8">Lecciones Aprendidas: El Prompt como Inversión</h2>
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                 <div class="bg-stone-800 text-white p-6 rounded-xl shadow-lg">
+                    <h4 class="font-bold text-lg text-amber-400 mb-2">Basura entra, basura sale</h4>
+                    <p class="text-sm text-stone-300">Un prompt vago producirá un resultado vago. Un prompt estructurado y detallado es el primer paso para obtener código de calidad.</p>
+                </div>
+                <div class="bg-stone-800 text-white p-6 rounded-xl shadow-lg">
+                    <h4 class="font-bold text-lg text-amber-400 mb-2">Piensa como un Project Manager</h4>
+                    <p class="text-sm text-stone-300">Define objetivos, flujos y reglas antes de escribir el prompt. Estás especificando un proyecto, no solo pidiendo una función.</p>
+                </div>
+                <div class="bg-stone-800 text-white p-6 rounded-xl shadow-lg">
+                    <h4 class="font-bold text-lg text-amber-400 mb-2">La especificidad es tu aliada</h4>
+                    <p class="text-sm text-stone-300">Cuantos más detalles y restricciones proporciones, menos tendrá que "adivinar" la IA, reduciendo errores y retrabajo.</p>
+                </div>
+             </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const analysisCards = document.querySelectorAll('.analysis-card');
+            const promptSections = document.querySelectorAll('.prompt-section');
+            const promptAccordion = document.getElementById('prompt-accordion');
+
+            let activeAnalysisCard = null;
+
+            function closeAllPromptSections() {
+                promptSections.forEach(section => {
+                    const content = section.querySelector('.prompt-content');
+                    const arrow = section.querySelector('.arrow');
+                    content.classList.remove('open');
+                    content.style.padding = '0px';
+                    arrow.style.transform = 'rotate(0deg)';
+                    section.classList.remove('highlight-section');
+                    section.style.borderLeftWidth = '0px';
+                });
+            }
+            
+            function deactivateAllAnalysisCards() {
+                 analysisCards.forEach(card => {
+                    card.classList.remove('active');
+                    const text = card.querySelector('.analysis-text');
+                    text.classList.add('hidden');
+                });
+            }
+
+            analysisCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const targetId = card.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+
+                    if (activeAnalysisCard === card) {
+                        deactivateAllAnalysisCards();
+                        closeAllPromptSections();
+                        activeAnalysisCard = null;
+                        return;
+                    }
+                    
+                    deactivateAllAnalysisCards();
+                    closeAllPromptSections();
+
+                    card.classList.add('active');
+                    const analysisText = card.querySelector('.analysis-text');
+                    analysisText.classList.remove('hidden');
+                    
+                    if (targetSection) {
+                        const content = targetSection.querySelector('.prompt-content');
+                        const arrow = targetSection.querySelector('.arrow');
+                        content.classList.add('open');
+                        content.style.padding = '1rem';
+                        arrow.style.transform = 'rotate(90deg)';
+                        
+                        targetSection.classList.add('highlight-section');
+                        targetSection.style.borderLeftWidth = '4px';
+
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    
+                    activeAnalysisCard = card;
+                });
+            });
+            
+            promptAccordion.addEventListener('click', function(e) {
+                const header = e.target.closest('.prompt-header');
+                if (!header) return;
+
+                const section = header.parentElement;
+                const content = section.querySelector('.prompt-content');
+                const arrow = section.querySelector('.arrow');
+                const isOpen = content.classList.contains('open');
+
+                if (!e.target.closest('.analysis-card')) {
+                    deactivateAllAnalysisCards();
+                    activeAnalysisCard = null;
+                }
+                
+                if(!isOpen) {
+                    if (!e.target.closest('.analysis-card')) {
+                         closeAllPromptSections();
+                    }
+                    content.classList.add('open');
+                    content.style.padding = '1rem';
+                    arrow.style.transform = 'rotate(90deg)';
+                } else {
+                     content.classList.remove('open');
+                     content.style.padding = '0px';
+                     arrow.style.transform = 'rotate(0deg)';
+                     section.classList.remove('highlight-section');
+                     section.style.borderLeftWidth = '0px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

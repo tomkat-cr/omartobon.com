@@ -1,24 +1,58 @@
 
 [
   {
-    "id": 1,
-    "name": "Camindra",
+    "id": 3,
+    "name": "OTO Visual Flow",
     "image": "./gallery/ai_avatars/Camindra_Thumb.jpg",
+    "description": "Generación de avatares animados para clientes de OTO Visual Flow",
+    "category": "Publicidad y Marketing",
     "resources_type": "video",
     "resources": [
       {
         "id": 1,
-        "name": "Camindra Lemon Slice",
+        "name": "Dama Paisa",
+        "image": "./gallery/ai_avatars/OTO_Dama-Paisa-Thumb.png",
+        "url": "./gallery/ai_avatars/OTO_Dama-Paisa-Lemon-Slice_d19fa.mp4"
+      },
+      {
+        "id": 2,
+        "name": "Camindra",
         "image": "./gallery/ai_avatars/Camindra_Thumb.jpg",
         "url": "./gallery/ai_avatars/Camindra_Lemon-Slice_cfb0e.mp4"
+      },
+      {
+        "id": 3,
+        "name": "Mama No Olvides",
+        "image": "./gallery/ai_avatars/OTO_Mama-No-Olvides-Thumb.png",
+        "url": "./gallery/ai_avatars/OTO_Mama-No-Olvides-VID-20250626-WA0006.mp4"
+      },
+      {
+        "id": 4,
+        "name": "Te Amo",
+        "image": "./gallery/ai_avatars/OTO_Te-Amo-Thumb-2025-05-11.png",
+        "url": "./gallery/ai_avatars/OTO_Te-Amo-VID-20250626-WA0007.mp4"
+      },
+      {
+        "id": 5,
+        "name": "La Foto",
+        "image": "./gallery/ai_avatars/Random_E-Thumb.png",
+        "url": "./gallery/ai_avatars/Random_E-La-Foto-Lemon-Slice_9d60c.mp4"
       }
     ]
   },
   {
     "id": 2,
-    "name": "Jurasic Art",
+    "name": "Jurassic Art Kids",
+    "description": "<strong>Dinosaur Coloring Book: Jurassic Art Ages 4-8</strong> por Omar Tobon<br><br>Este es un <a href=\"https://www.amazon.com/dp/B0F7HRRTX3?ref_=pe_93986420_774957520\">libro para colorear</a> diseñado para niños y niñas de 4 a 8 años, especialmente para aquellos que aman los dinosaurios. Se presenta como una divertida y creativa aventura prehistórica.<br><br>Características principales:<br>* Contenido: Incluye 25 ilustraciones de dinosaurios en un adorable y tierno estilo \"kawaii\".<br>* Diseño: Los dibujos tienen líneas grandes y gruesas, ideales para las manos pequeñas de los niños que están aprendiendo a colorear.<br>* Beneficios Educativos: Fomenta el desarrollo de la motricidad fina, la coordinación mano-ojo, la expresión creativa y la concentración.<br>* Actividad sin pantallas: Ofrece una alternativa de entretenimiento lejos de los dispositivos electrónicos, perfecta para el hogar, viajes o el aula.</br></br>Es ideal para:<br>* Niños y niñas de 4 a 8 años.<br>* Padres y maestros que buscan herramientas de aprendizaje creativas.<br>* Ser un regalo perfecto para cumpleaños o festividades, ya que estimula la imaginación.</br></br>En resumen, cada página, con dinosaurios como un T-Rex sonriente o un Triceratops pintor, busca sumergir a los niños en un mundo jurásico amigable y lleno de diversión.",
+    "category": "Libros",
     "image": "./gallery/ai_image_generation/JurasicArt_dinoamor.jpg",
     "resources_type": "video",
+    "urls": [
+      {
+        "name": "Ver y comprar el Libro en Amazon",
+        "url": "https://www.amazon.com/dp/B0F7HRRTX3?ref_=pe_93986420_774957520"
+      }
+    ],
     "resources": [
       {
         "id": 1,
@@ -41,40 +75,10 @@
     ]
   },
   {
-    "id": 3,
-    "name": "OTO",
-    "image": "./images/logo-escudo-oto.png",
-    "resources_type": "video",
-    "resources": [
-      {
-        "id": 1,
-        "name": "Dama Paisa",
-        "image": "./gallery/ai_avatars/OTO_Dama-Paisa-Thumb.png",
-        "url": "./gallery/ai_avatars/OTO_Dama-Paisa-Lemon-Slice_d19fa.mp4"
-      },
-      {
-        "id": 2,
-        "name": "Mama No Olvides",
-        "image": "./gallery/ai_avatars/OTO_Mama-No-Olvides-Thumb.png",
-        "url": "./gallery/ai_avatars/OTO_Mama-No-Olvides-VID-20250626-WA0006.mp4"
-      },
-      {
-        "id": 3,
-        "name": "Te Amo",
-        "image": "./gallery/ai_avatars/OTO_Te-Amo-Thumb-2025-05-11.png",
-        "url": "./gallery/ai_avatars/OTO_Te-Amo-VID-20250626-WA0007.mp4"
-      },
-      {
-        "id": 1,
-        "name": "La Foto",
-        "image": "./gallery/ai_avatars/Random_E-Thumb.png",
-        "url": "./gallery/ai_avatars/Random_E-La-Foto-Lemon-Slice_9d60c.mp4"
-      }
-    ]
-  },
-  {
     "id": 5,
-    "name": "Esmioptica",
+    "name": "EsmiÓptica",
+    "category": "Publicidad y Marketing",
+    "description": "Generación de piezas publicitarias animadas para redes sociales de la empresa EsmiÓptica",
     "image": "./gallery/ai_image_generation/Esmioptica_Boton.jpg",
     "resources_type": "video",
     "resources": [

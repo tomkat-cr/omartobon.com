@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'imagenes-ia': 'imagenes-ia.html',
         'avatares-animados': 'avatares-animados.html',
         'presentaciones': 'presentaciones.html',
-        'prompts-estrategicos': 'prompts-estrategicos.html'
+        'prompts-estrategicos': 'prompts-estrategicos.html',
+        'contacto': '#contacto'
     };
 
     const galleries = {
@@ -40,6 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Determine which file to load, defaulting to home.html
         const pageFile = routes[path] || routes[''];
 
+        if (pageFile.startsWith('#')) {
+            const section = document.querySelector(pageFile);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+            return;
+        }
         try {
             const response = await fetch(pageFile);
             if (!response.ok) throw new Error('Page not found');

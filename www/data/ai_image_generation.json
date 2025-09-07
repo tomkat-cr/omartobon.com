@@ -27,9 +27,25 @@
       "resources_type": "image",
       "resources": [
           {
-              "id": 1,
-              "name": "MedOffLine - Portada # 1",
-              "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/MedOffLine-cover-image-final-esp.png?raw=true"
+            "id": 18,
+            "name": "Medoffline H",
+            "image": "./gallery/ai_image_generation/Medoffline_51084124-3784-41dc-9dc6-a0497427a950.jpg"
+          },
+          {
+            "id": 19,
+            "name": "Medoffline I",
+            "image": "./gallery/ai_image_generation/Medoffline_7c2fd859-00b3-4d9c-bfaa-9269af0e3692.jpg"
+          },
+
+          {
+            "id": 15,
+            "name": "Medoffline E",
+            "image": "./gallery/ai_image_generation/Medoffline_4cc0a5f1-4c14-4a9c-8fce-d0b6ee912adb.webp"
+          },
+          {
+            "id": 16,
+            "name": "Medoffline F",
+            "image": "./gallery/ai_image_generation/Medoffline_4df2bb2a-60e9-494c-b2c7-8775ca5f01a9.jpg"
           },
           {
               "id": 2,
@@ -42,9 +58,49 @@
               "image": "https://raw.githubusercontent.com/tomkat-cr/medoffline/refs/heads/main/assets/MedOffLine-cover-image-2.webp"
           },
           {
-              "id": 4,
-              "name": "Ilustracion de Medicos en Accion # 1",
-              "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/1eb5de0b-c739-4547-920f-14d35f875db0.jpeg?raw=true"
+            "id": 11,
+            "name": "Medoffline A",
+            "image": "./gallery/ai_image_generation/Medoffline_13f37628-ccd0-48d7-949e-a0ff7fe705d2.webp"
+          },
+          {
+            "id": 12,
+            "name": "Medoffline B",
+            "image": "./gallery/ai_image_generation/Medoffline_1a8d29e4-1c5c-4a6e-bca7-7cf6c9d9a07c.webp"
+          },
+          {
+            "id": 20,
+            "name": "Medoffline J",
+            "image": "./gallery/ai_image_generation/Medoffline_95d71600-65a2-4b31-a043-182cef378f82.webp"
+          },
+          {
+            "id": 13,
+            "name": "Medoffline C",
+            "image": "./gallery/ai_image_generation/Medoffline_2831b203-d3f1-453d-916b-a1a0ffbc297b.webp"
+          },
+          {
+            "id": 14,
+            "name": "Medoffline D",
+            "image": "./gallery/ai_image_generation/Medoffline_36e12050-1d74-42a5-bcc1-196dd8a48fdb.webp"
+          },
+          {
+            "id": 17,
+            "name": "Medoffline G",
+            "image": "./gallery/ai_image_generation/Medoffline_4f125f1e-3cc3-4a06-bc55-1f4118d780d3.webp"
+          },
+          {
+            "id": 21,
+            "name": "Enhanced Colorful Image",
+            "image": "./gallery/ai_image_generation/Medoffline_Enhanced-Colorful-Image.png"
+          },
+          {
+            "id": 22,
+            "name": "Llama y Salto Angel",
+            "image": "./gallery/ai_image_generation/Medoffline_Llama-y-Salto-Angel.webp"
+          },
+          {
+            "id": 4,
+            "name": "Ilustracion de Medicos en Accion # 1",
+            "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/1eb5de0b-c739-4547-920f-14d35f875db0.jpeg?raw=true"
           },
           {
               "id": 5,
@@ -77,72 +133,43 @@
               "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/f8938201-f228-4a65-82da-d5bfd52b5b6d.jpeg?raw=true"
           },
           {
-            "id": 11,
-            "name": "Medoffline A",
-            "image": "./gallery/ai_image_generation/Medoffline_13f37628-ccd0-48d7-949e-a0ff7fe705d2.webp"
-          },
-          {
-            "id": 12,
-            "name": "Medoffline B",
-            "image": "./gallery/ai_image_generation/Medoffline_1a8d29e4-1c5c-4a6e-bca7-7cf6c9d9a07c.webp"
-          },
-          {
-            "id": 13,
-            "name": "Medoffline C",
-            "image": "./gallery/ai_image_generation/Medoffline_2831b203-d3f1-453d-916b-a1a0ffbc297b.webp"
-          },
-          {
-            "id": 14,
-            "name": "Medoffline D",
-            "image": "./gallery/ai_image_generation/Medoffline_36e12050-1d74-42a5-bcc1-196dd8a48fdb.webp"
-          },
-          {
-            "id": 15,
-            "name": "Medoffline E",
-            "image": "./gallery/ai_image_generation/Medoffline_4cc0a5f1-4c14-4a9c-8fce-d0b6ee912adb.webp"
-          },
-          {
-            "id": 16,
-            "name": "Medoffline F",
-            "image": "./gallery/ai_image_generation/Medoffline_4df2bb2a-60e9-494c-b2c7-8775ca5f01a9.jpg"
-          },
-          {
-            "id": 17,
-            "name": "Medoffline G",
-            "image": "./gallery/ai_image_generation/Medoffline_4f125f1e-3cc3-4a06-bc55-1f4118d780d3.webp"
-          },
-          {
-            "id": 18,
-            "name": "Medoffline H",
-            "image": "./gallery/ai_image_generation/Medoffline_51084124-3784-41dc-9dc6-a0497427a950.jpg"
-          },
-          {
-            "id": 19,
-            "name": "Medoffline I",
-            "image": "./gallery/ai_image_generation/Medoffline_7c2fd859-00b3-4d9c-bfaa-9269af0e3692.jpg"
-          },
-          {
-            "id": 20,
-            "name": "Medoffline J",
-            "image": "./gallery/ai_image_generation/Medoffline_95d71600-65a2-4b31-a043-182cef378f82.webp"
-          },
-          {
-            "id": 21,
-            "name": "Enhanced Colorful Image",
-            "image": "./gallery/ai_image_generation/Medoffline_Enhanced-Colorful-Image.png"
-          },
-          {
-            "id": 22,
-            "name": "Llama y Salto Angel",
-            "image": "./gallery/ai_image_generation/Medoffline_Llama-y-Salto-Angel.webp"
+              "id": 23,
+              "name": "MedOffLine - Portada # 1",
+              "image": "https://github.com/tomkat-cr/medoffline/blob/main/assets/MedOffLine-cover-image-final-esp.png?raw=true"
           }
-     
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Jurassic Art Kids",
+      "description": "<strong>Dinosaur Coloring Book: Jurassic Art Ages 4-8</strong> por Omar Tobon<br><br>Este es un <a href=\"https://www.amazon.com/dp/B0F7HRRTX3?ref_=pe_93986420_774957520\">libro para colorear</a> diseñado para niños y niñas de 4 a 8 años, especialmente para aquellos que aman los dinosaurios. Se presenta como una divertida y creativa aventura prehistórica.<br><br>Características principales:<br>* Contenido: Incluye 25 ilustraciones de dinosaurios en un adorable y tierno estilo \"kawaii\".<br>* Diseño: Los dibujos tienen líneas grandes y gruesas, ideales para las manos pequeñas de los niños que están aprendiendo a colorear.<br>* Beneficios Educativos: Fomenta el desarrollo de la motricidad fina, la coordinación mano-ojo, la expresión creativa y la concentración.<br>* Actividad sin pantallas: Ofrece una alternativa de entretenimiento lejos de los dispositivos electrónicos, perfecta para el hogar, viajes o el aula.</br></br>Es ideal para:<br>* Niños y niñas de 4 a 8 años.<br>* Padres y maestros que buscan herramientas de aprendizaje creativas.<br>* Ser un regalo perfecto para cumpleaños o festividades, ya que estimula la imaginación.</br></br>En resumen, cada página, con dinosaurios como un T-Rex sonriente o un Triceratops pintor, busca sumergir a los niños en un mundo jurásico amigable y lleno de diversión.",
+      "category": "Libros",
+      "image": "./gallery/ai_image_generation/JurasicArt_dinoamor.jpg",
+      "resources_type": "image",
+      "urls": [
+        {
+          "name": "Ver y comprar el Libro en Amazon",
+          "url": "https://www.amazon.com/dp/B0F7HRRTX3?ref_=pe_93986420_774957520"
+        }
+      ],
+      "resources": [
+        {
+          "id": 1,
+          "name": "Portada libro - Dinoamor",
+          "image": "./gallery/ai_image_generation/JurasicArt_dinoamor.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Contraportada libro",
+          "image": "./gallery/ai_image_generation/JurasicArt_contraportada.jpg"
+        }
       ]
     },
     {
       "id": 2,
-      "name": "Esmioptica",
+      "name": "EsmiÓptica",
       "category": "Publicidad y Marketing",
+      "description": "Generación de imágenes para piezas publicitarias (flyers, material digital para pantallas de TV), presentaciones y redes sociales de la empresa EsmiÓptica",
       "image": "./gallery/ai_image_generation/Esmioptica_Boton.jpg",
       "resources_type": "image",
       "resources": [
@@ -272,6 +299,7 @@
       "id": 3,
       "name": "Finanzas",
       "category": "Desarrollo de Presentaciones",
+      "description": "Generación de imágenes para presentación sobre la importancia del ahorro a largo plazo",
       "image": "./gallery/ai_image_generation/Finanzas_01_Brujula-financiera.jpg",
       "resources_type": "image",
       "resources": [
@@ -298,48 +326,11 @@
       ]
     },
     {
-      "id": 4,
-      "name": "Impresos",
-      "image": "./gallery/ai_image_generation/Impresos_Titanic-para-camisa_IMG-20250626-WA0223.jpg",
-      "resources_type": "image",
-      "resources": [
-        {
-          "id": 1,
-          "name": "Titanic para camisa",
-          "image": "./gallery/ai_image_generation/Impresos_Titanic-para-camisa_IMG-20250626-WA0223.jpg"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Jurasic Art",
-      "image": "./gallery/ai_image_generation/JurasicArt_dinoamor.jpg",
-      "resources_type": "image",
-      "resources": [
-        {
-          "id": 1,
-          "name": "Dinoamor",
-          "image": "./gallery/ai_image_generation/JurasicArt_dinoamor.jpg"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Arts & Avatars",
-      "image": "./gallery/ai_image_generation/Art_Love-is-the-answer-2025-05-11.png",
-      "resources_type": "image",
-      "resources": [
-        {
-          "id": 1,
-          "name": "Love is the answer",
-          "image": "./gallery/ai_image_generation/Art_Love-is-the-answer-2025-05-11.png"
-        }
-      ]
-    },
-    {
       "id": 7,
       "name": "OTO Visual Flow",
       "image": "./images/logo-escudo-oto.png",
+      "description": "Generación de imágenes para piezas publicitarias, presentaciones, portafolios, redes sociales y el sitio web de OTO Visual Flow",
+      "category": "Publicidad y Marketing",
       "resources_type": "image",
       "resources": [
         {
@@ -365,7 +356,7 @@
         {
           "id": 5,
           "name": "Flyer Soluciones Creativas",
-          "image": "./gallery/ai_image_generation/OTO_Flyer-Soluciones-Creativas - 2025-06-20.png"
+          "image": "./gallery/ai_image_generation/OTO_Flyer-Soluciones-Creativas-2025-06-20.png"
         },
         {
           "id": 6,
@@ -401,6 +392,36 @@
           "id": 13,
           "name": "Tarjeta presentacion C",
           "image": "./gallery/ai_image_generation/OTO_Tarjeta-presentacion-2025-06-25.png"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Impresos",
+      "description": "Generación de imágenes para material impreso, tales como camisas, tazas, gorras, etc.",
+      "category": "Publicidad y Marketing",
+      "image": "./gallery/ai_image_generation/Impresos_Titanic-para-camisa_IMG-20250626-WA0223.jpg",
+      "resources_type": "image",
+      "resources": [
+        {
+          "id": 1,
+          "name": "Titanic para camisa",
+          "image": "./gallery/ai_image_generation/Impresos_Titanic-para-camisa_IMG-20250626-WA0223.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Arts & Avatars",
+      "description": "Generación de imágenes para avatares, fotografias caricaturizadas, perfiles de redes sociales, etc.",
+      "category": "Arte",
+      "image": "./gallery/ai_image_generation/Art_Love-is-the-answer-2025-05-11.png",
+      "resources_type": "image",
+      "resources": [
+        {
+          "id": 1,
+          "name": "Love is the answer",
+          "image": "./gallery/ai_image_generation/Art_Love-is-the-answer-2025-05-11.png"
         }
       ]
     }
