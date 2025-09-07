@@ -1,5 +1,5 @@
 #!/bin/bash
-# mkdocs_transfer_site.sh
+# ftp_transfer_site.sh
 # 2025-06-28 | CR
 
 # The script reads the following parameters from .env:

@@ -5,12 +5,29 @@
 </IfModule>
 # php -- END cPanel-generated handler, do not edit
 
+####################
+
+# Set envvars
+
+####################
+
 # Google reCAPTCHA Keys
 SetEnv RECAPTCHA_SITE_KEY "your_site_key_here"
 SetEnv RECAPTCHA_SECRET_KEY "your_secret_key_here"
 
-# Set envvars
+# Google Tag ID
+SetEnv GOOGLE_TAG_ID "your_google_tag_id"
+
+####################
+
+# Allowed referrers
+SetEnv ALLOWED_REFERRERS "http://localhost:8080"
+
+####################
+
+# Emailing settings
 SetEnv TARGET_EMAIL "your-email@your-domain.com"
+SetEnv TARGET_NAME "Your Name"
 
 SetEnv MAIL_PROVIDER "smtp"
 # SetEnv MAIL_PROVIDER "sendgrid"
@@ -30,3 +47,21 @@ SetEnv SMTP_PASSWORD "your-password"
 # Pear mail
 # SetEnv HOSTING_USER_PEAR_PATH "/home/your-hosting-username/php"
 # SetEnv ALLOWED_PATHS "/home/your-hosting-username/php"
+
+####################
+
+# CORS configuration
+
+<IfModule mod_headers.c>
+  # Header set Access-Control-Allow-Origin "http://localhost:8080"
+  Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+  Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  Header always set Access-Control-Allow-Credentials "true"
+  # Handle preflight requests
+  <If "%{REQUEST_METHOD} == 'OPTIONS'">
+    Header always set Access-Control-Max-Age "86400"
+    Header always set Content-Length "0"
+    Header always set Content-Type "text/plain charset=UTF-8"
+    Require all granted
+  </If>
+</IfModule>
