@@ -317,12 +317,7 @@ class MailService {
 
     function fix_message($body) {
         $result = html_entity_decode($body);
-        $result = str_replace("<br>", "\r\n", $result);
-        $result = str_replace("<br />", "\r\n", $result);
-        $result = str_replace("<br/>", "\r\n", $result);
-        $result = str_replace("<BR>", "\r\n", $result);
-        $result = str_replace("<BR />", "\r\n", $result);
-        $result = str_replace("<BR/>", "\r\n", $result);
+        $result = str_ireplace(['<br>', '<br />', '<br/>'], "\r\n", $result);
         return $result;
     }
 

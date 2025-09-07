@@ -31,12 +31,12 @@ class ContactService extends MailService {
         $send_type = $_POST['send_type'] ?? 'contact';
     
         // Receive POST data
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-        $attachments = $this->get_attachments();
+        $name = $_POST['name'] ?? '';
+        $email = $_POST['email'] ?? '';
+        $message = $_POST['message'] ?? '';
+        $this->referrer = $_POST['referrer'] ?? '';
 
-        $this->referrer = $_POST['referrer'];
+        $attachments = $this->get_attachments();
 
         // reCAPTCHA verification
         $recaptcha_result = (new RecaptchaService())->verify_recaptcha();
@@ -49,6 +49,10 @@ class ContactService extends MailService {
         }
     
         // Validate data
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $this->sendResult('Error: Formato de email inválido');
+        }
+        
         if (empty($name) || empty($email) || empty($message)) {
             $this->sendResult('Error: Faltan datos');
         }
